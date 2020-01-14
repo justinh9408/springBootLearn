@@ -2,6 +2,7 @@ package com.hjc;
 
 import com.hjc.bean.Person;
 import com.hjc.controller.HelloController;
+import com.hjc.service.HelloService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,12 @@ public class MainApplicationTest {
     @Autowired
     Person person;
 
+    @Autowired
+    HelloService helloService;
 
     @Test
     public void testContext(){
+        assertNotNull(helloService);
         System.out.println(person);
     }
 }
