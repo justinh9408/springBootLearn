@@ -16,7 +16,7 @@ import java.util.Map;
  * @Date 2020-01-13 22:32
  * @Created by Justin
  */
-@PropertySource(value = {"classpath:person.properties"})
+//@PropertySource(value = {"classpath:person.properties"})
 @Component
 @ConfigurationProperties(prefix = "person") //适用于专门写一个POJO来封装配置的值
 @Validated

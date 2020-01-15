@@ -1,13 +1,34 @@
 server:
   port: 8080
+spring:
+  profiles:
+    active: test
 
-#person:
-#  lastName: 张三
-#  age: 18
-#  boss: false
-#  map: {k1: v1,k2: 12}
-#  dog:
-#    name: wangwang
-#    age: 2
-#
-#
+---
+
+person:
+  lastName: 张三
+  age: 18
+  boss: false
+  map: {k1: v1,k2: 12}
+  dog:
+    name: wangwang
+    age: 2
+spring:
+  profiles: dev
+
+---
+
+person:
+  lastName: 李四
+  age: 18
+  boss: false
+  map: {k1: v1,k2: 12}
+  dog:
+    name: wangwang
+    age: 2
+spring:
+  profiles: test
+
+
+
