@@ -5,6 +5,8 @@ import com.hjc.controller.HelloController;
 import com.hjc.service.HelloService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -21,6 +23,8 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class MainApplicationTest {
 
+    Logger logger = LoggerFactory.getLogger(getClass());
+
     @Autowired
     Person person;
 
@@ -32,4 +36,13 @@ public class MainApplicationTest {
         assertNotNull(helloService);
         System.out.println(person);
     }
+
+    @Test
+    public void testLog(){
+        logger.trace("tr");
+        logger.info("info");
+        logger.warn("warn");
+
+    }
+
 }

@@ -27,6 +27,15 @@ person:
   dog:
     name: wangwang
     age: 2
+
+server:
+  servlet:
+    context-path: /boot
+logging:
+  level:
+    com.hjc: warn
+  file: spring.log
+
 spring:
   profiles: test
 
